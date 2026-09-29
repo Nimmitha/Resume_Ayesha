@@ -1,0 +1,225 @@
+% =====================================================================
+%  CV -- Ayesha Lakshani Wanni Arachchige
+%  Self-contained: no external template/class needed.
+%  Compile with pdfLaTeX (Overleaf default).
+% =====================================================================
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,top=1.4cm,bottom=1.4cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Font (Open Sans on Overleaf; Helvetica fallback) ----------
+\IfFileExists{opensans.sty}
+  {\usepackage[default,osfigures=false]{opensans}}
+  {\usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}}
+
+% ---------- Icons (FontAwesome on Overleaf; text fallback) ----------
+\IfFileExists{fontawesome5.sty}
+  {\usepackage{fontawesome5}
+   \newcommand{\emailicon}{\faEnvelope}
+   \newcommand{\phoneicon}{\faPhone}}
+  {\newcommand{\emailicon}{Email:}
+   \newcommand{\phoneicon}{Tel:}}
+
+% ---------- Colours ----------
+\definecolor{headergray}{HTML}{DADADA}
+\definecolor{textdark}{HTML}{3A3A45}
+\color{textdark}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.6em,topsep=2pt,itemsep=1pt,parsep=0pt,label=\textbullet}
+
+% ---------- Section header: rounded grey bar ----------
+\newcommand{\cvsection}[1]{%
+  \vspace{8pt}%
+  \begin{tcolorbox}[colback=headergray,colframe=headergray,arc=9pt,
+      boxrule=0pt,left=10pt,right=10pt,top=3pt,bottom=3pt]
+    \large\itshape\bfseries\MakeUppercase{#1}%
+  \end{tcolorbox}%
+  \vspace{2pt}%
+}
+
+% ---------- Entry: bold title with right-aligned date ----------
+% \cventry{Title}{Date}{Subtitle / institution (optional, may be empty)}
+\newcommand{\cventry}[3]{%
+  \vspace{5pt}%
+  {\bfseries #1}\hfill{\bfseries #2}\par
+  \if\relax\detokenize{#3}\relax\else
+    \vspace{2pt}#3\par
+  \fi
+}
+
+\begin{document}
+
+% =====================================================================
+%  HEADER
+% =====================================================================
+{\fontsize{24}{28}\selectfont\bfseries AYESHA LAKSHANI WANNI ARACHCHIGE}\par
+\vspace{8pt}
+451 Prestwick Ridge Way, Apt 132, Knoxville, Tennessee\par
+\vspace{2pt}
++1 865 283 6512 / +1 865 236 8673 \quad | \quad
+\href{mailto:ayeshaniwk@gmail.com}{ayeshaniwk@gmail.com}\par
+
+% =====================================================================
+\cvsection{Personal Profile}
+% =====================================================================
+Environmental Technology graduate with strong academic and research experience in ecology, environmental
+science, sustainability, and resource management. Skilled in quantitative analysis using Python and R, GIS and
+spatial analysis, environmental modeling, energy efficiency, and ecosystem assessment. Experienced in
+integrating field observations, environmental data, and statistical methods to evaluate ecological patterns and
+environmental change. Recognized for outstanding undergraduate research and experienced as a Research
+Assistant in environmental research. Demonstrates strong analytical, communication, and collaborative skills,
+with an interest in ecological conservation, evidence-based decision-making, and resource management.
+
+% =====================================================================
+\cvsection{Education}
+% =====================================================================
+\cventry{Bachelor of Bio-System Technology (Honors) in Environmental Technology}{2018 -- 2023}
+  {Department of Environmental Technology, Faculty of Technology, University of Colombo, Sri Lanka}
+{\bfseries GPA: 3.51 / 4.00}
+
+\cventry{G.C.E. Advanced Level Examination}{2016}
+  {Weerakatiya Central College, Weerakatiya, Sri Lanka}
+\begin{itemize}
+  \item 3 As (Science for Technology, Bio-System Technology, Agriculture Science)
+  \item Island Rank: 11 | District Rank: 01
+\end{itemize}
+
+\cventry{G.C.E. Ordinary Level Examination}{2013}
+  {Thalawa Maha Vidyalaya, Sri Lanka}
+\begin{itemize}
+  \item 2As, 5Bs, 2Cs
+\end{itemize}
+
+% =====================================================================
+\cvsection{Research Experience}
+% =====================================================================
+\cventry{Academic \& Professional Development}{2024 -- Present}{}
+\begin{itemize}
+  \item Focused on research publication work and expanding analytical and modeling skills through R and
+        online coursework.
+\end{itemize}
+
+\cventry{Research Assistant}{2024 (6 months)}
+  {Department of Instrumentation \& Automation Technology, University of Colombo, Sri Lanka}
+\begin{itemize}
+  \item Participated in a research project on the implementation of IoT-Based Smart Protected Agriculture
+        Systems for Polytunnels and Urban Houses, with a focus on greenhouse modeling and simulation.
+\end{itemize}
+
+\cventry{Design and Simulation of Vertical Axis Wind Turbine with Improved Deflector System}{2023}
+  {Department of Instrumentation \& Automation Technology, University of Colombo, Sri Lanka}
+\begin{itemize}
+  \item Conducted as an undergraduate research project to identify optimal deflector distance, angle, and
+        wind velocity for improved turbine efficiency, primarily using CAD simulations, ANSYS,
+        SOLIDWORKS, Python, and SPSS software.
+\end{itemize}
+
+\cventry{Eco-Friendly Textile Dye Removal Using Biosorbents}{2022}{}
+\begin{itemize}
+  \item Conducted as a third-year group research project focused on biosorbent methods for treating
+        industrial wastewater.
+\end{itemize}
+
+\newpage
+% =====================================================================
+\cvsection{Publications}
+% =====================================================================
+% TODO: replace each "https://www.researchgate.net/" with the actual paper URL
+\begin{itemize}[itemsep=5pt]
+  \item Lakshani, W.A.A. et al. (2025). Predictive regression model for moment coefficient estimation in VAWTs.
+        ICSD 2025, Sri Lanka. \href{https://www.researchgate.net/}{\underline{ResearchGate}}
+  \item Lakshani, W.A.A. et al. (2024). Thermal performance analysis of Quonset polytunnels using CFD.
+        Annual Research Symposium 2024, University of Colombo. \href{https://www.researchgate.net/}{\underline{ResearchGate}}
+  \item Lakshani, W.A.A. et al. (2024). Optimizing VAWT performance and deflector configuration based on wind speed.
+        8th International Forestry and Environment Symposium 2024, University of Sri Jayewardenepura.
+        \href{https://www.researchgate.net/}{\underline{ResearchGate}}
+  \item Lakshani, W.A.A. et al. (2023). Simulation-based investigation of advanced wind deflectors in VAWTs for
+        improved energy harvesting. Annual Research Symposium 2023, University of Colombo.
+        \href{https://www.researchgate.net/}{\underline{ResearchGate}}
+  \item Lakshani, W.A.A. et al. (2025). Development of a Predictive Regression Model for Moment Coefficient Estimation
+        in Vertical-Axis Wind Turbines through Simulation. Submitted full paper to the Journal of the National Science
+        Foundation of Sri Lanka (Under review)
+\end{itemize}
+
+% =====================================================================
+\cvsection{Professional Experience}
+% =====================================================================
+\cventry{Executive -- Business Development}{2023 -- 2024}
+  {RCS2 Technologies (Pvt) Ltd, Colombo 06, Sri Lanka}
+\begin{itemize}
+  \item Focused on implementing advanced IoT solutions for smart environmental systems, with additional
+        contributions to 3D printing and scanning for product development and customization.
+\end{itemize}
+
+\cventry{Trainee -- Environmental Sustainability and Compliance}{2021 -- 2022}
+  {MAS ACTIVE (Pvt) Ltd, Mamadala, Sri Lanka}
+\begin{itemize}
+  \item Conducted environmental audits and compliance assessments, supported waste and pollution control
+        initiatives, and contributed to energy efficiency and ISO 14001 alignment in industrial operations.
+\end{itemize}
+
+% =====================================================================
+\cvsection{Technical Skills}
+% =====================================================================
+\begin{itemize}
+  \item \textbf{Software}: MS Office, SPSS, R, GIS, SOLIDWORKS, ANSYS
+  \item \textbf{Research}: Simulation modeling, data analysis, environmental assessment, greenhouse modeling,
+        system optimization, and performance evaluation
+  \item \textbf{Communication}: Academic writing, teamwork, presentations
+\end{itemize}
+
+% =====================================================================
+\cvsection{Projects \& Leadership}
+% =====================================================================
+\begin{itemize}
+  \item Personalized Insole Manufacturing Using 3D Printing -- RCS2 Technologies (Pvt) Ltd
+  \item Tree Plantation \& Solid Waste Management Projects -- MAS Holdings
+  \item Risk Assessment \& Sustainability Projects -- MAS Holdings
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Leadership:}
+\begin{itemize}
+  \item Committee Member -- Environmental Society, University of Colombo (2022)
+  \item Department Representative -- Faculty of Technology (2018)
+  \item Environmental Club Leader -- Thalawa Maha Vidyalaya (2008--2013)
+\end{itemize}
+
+% =====================================================================
+\cvsection{References}
+% =====================================================================
+\vspace{2pt}
+{\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+  Prof. Chamini K. Hemachandra &
+  Dr. Sanjaya Thilakarathne &
+  Dr. Poorna C. Piyathilaka \\
+  Head, &
+  Head, &
+  Senior Lecturer \\
+  Department of Environmental Technology &
+  Department of Instrumentation \& Automation Technology &
+  Department of Environmental Technology \\
+  University of Colombo, Sri Lanka &
+  University of Colombo, Sri Lanka &
+  Faculty of Technology, University of Colombo, Sri Lanka \\[3pt]
+  \emailicon\ \href{mailto:chamini@et.cmb.ac.lk}{chamini@et.cmb.ac.lk} &
+  \emailicon\ \href{mailto:sanjaya@iat.cmb.ac.lk}{sanjaya@iat.cmb.ac.lk} &
+  \emailicon\ \href{mailto:poorna@et.cmb.ac.lk}{poorna@et.cmb.ac.lk} \\
+  \phoneicon\ +94-70-2582002 &
+  \phoneicon\ +94-71-3112601 &
+  \phoneicon\ +94-77-2968974 \\
+\end{tabularx}
+}
+
+\end{document}
